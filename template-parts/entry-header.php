@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays the (Awesome) post header
+ * Displays the (awesome) post header
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
@@ -42,14 +42,13 @@ if ( is_singular() ) {
 			<?php
 		}
 
-		if ( is_singular() ) :
+		if ( is_singular() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
-		elseif ( has_post_format( 'link' ) ) :
+		} elseif ( has_post_format( 'link' ) ) {
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( twentytwenty_gone_awesome_get_link_url() ) ), '</a></h2>' );
-		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-		endif;
-		?>
+		} else {
+			the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+		}
 
 		$intro_text_width = '';
 
