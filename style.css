@@ -1,0 +1,40 @@
+/*
+ Theme Name:   Twenty Twenty Gone Awesome!
+ Description:  Just some tweaks to Twenty Twenty to make it my personal brand of awesome.
+ Author:       eD! Thomas
+ Author URI:   https://et3.io
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  2k20
+*/
+
+/* hide post author */
+.post-meta .post-author,
+.author-bio{
+	display: none;
+}
+
+/* hide related post excerpt */
+.jp-relatedposts-post-excerpt {
+	display: none;
+}
+
+/* fix related posts */
+#jp-relatedposts {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* add right arrow after post title link for link posts */
+.format-link .entry-title a:after  {
+	content: "\f344";
+	font-family: dashicons;
+	vertical-align: middle;
+}
+
+/* hide the entry title for status posts */
+.format-status .entry-title {
+	display: none;
+}
