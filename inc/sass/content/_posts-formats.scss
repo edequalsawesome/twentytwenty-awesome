@@ -1,0 +1,17 @@
+/* - POST FORMATS - */
+/* add right arrow after post title link for link posts */
+.format-link .entry-title a:after  {
+	content: "\f344";
+	font-family: dashicons;
+	vertical-align: middle;
+}
+
+/* hide the entry title for status posts */
+.format-status .entry-title {
+	display: none;
+}
+
+/* add margin for video posts on single post page */
+.single-format-video.reduced-spacing.missing-post-thumbnail .post-inner {
+	padding-top: 5rem;
+}

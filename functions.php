@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package twentytwenty Gone Awesome
+ * @package Twenty Twenty Gone Awesome
  */
  
  function twentytwenty_gone_awesome_enqueue_styles() {
 	 $parent_style = 'twentytwenty';
 	 
-	 wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-	 wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css' );
+	 wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+	 wp_enqueue_style( 'awesome-style', get_stylesheet_directory_uri() . '/inc/2k20-styles.css', array( $parent_style ) );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwenty_gone_awesome_enqueue_styles' );
 

@@ -1,0 +1,33 @@
+/* -- JETPACK -- */
+/* SHARING BUTTONS/RELATED POSTS */
+body .entry-content {
+	/* make share this title smaller, reduce margin */
+	div.sharedaddy h3.sd-title, 
+	h3.sd-title,
+	.sharedaddy.sd-sharing-enabled,
+	#jp-relatedposts h3.jp-relatedposts-headline {
+		font-size: 2rem;
+		margin-bottom: .5rem;
+	}
+	
+	/* set max width for related posts area */
+	#jp-relatedposts {
+		max-width: 58rem;
+		
+		/* change font size for related posts title */
+		.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+			font-size: 80%;
+		}
+	}
+}
+
+/* JETPACK SEARCH */
+/* make content in search full-width */
+.jetpack-instant-search__result-expanded__copy-container {
+	width: 100%;
+}
+
+/* hide featured image in search */
+.jetpack-instant-search__result-expanded__image-container {
+	display: none;
+}

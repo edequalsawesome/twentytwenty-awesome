@@ -1,0 +1,20 @@
+/* - BLOCKS - */
+/* blog posts block */
+.wp-block-newspack-blocks-homepage-articles.wpnbha {
+	/* change border color and spacing when style is borders */
+	&.is-style-borders article {
+		border-color: rgba(255,255,255,0.2);
+		margin-bottom: 1.5em;
+		padding-bottom: 1.5em;
+	}
+	
+	/* add underline to episode title links */
+	.entry-title a {
+		text-decoration: underline;
+		
+		/* remove underline on hover */
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

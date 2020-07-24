@@ -1,0 +1,166 @@
+/* -- VARIABLES -- */
+:root {
+  --font-base-default: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+
+/* -- BODY -- */
+/* set body and content font */
+body,
+.entry-content {
+  font-family: var(--font-base-default);
+  font-weight: 200; }
+
+/* -- HEADER -- */
+/* adjust letter spacing of site title and description */
+.site-description {
+  letter-spacing: -1.5px; }
+
+/* set menu font weight */
+ul.primary-menu {
+  font-weight: 700; }
+
+/* -- SITE CONTENT -- */
+/* - BLOCKS - */
+/* blog posts block */
+.wp-block-newspack-blocks-homepage-articles.wpnbha {
+  /* change border color and spacing when style is borders */
+  /* add underline to episode title links */ }
+  .wp-block-newspack-blocks-homepage-articles.wpnbha.is-style-borders article {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em; }
+  .wp-block-newspack-blocks-homepage-articles.wpnbha .entry-title a {
+    text-decoration: underline;
+    /* remove underline on hover */ }
+    .wp-block-newspack-blocks-homepage-articles.wpnbha .entry-title a:hover {
+      text-decoration: none; }
+
+/* - POST FORMATS - */
+/* add right arrow after post title link for link posts */
+.format-link .entry-title a:after {
+  content: "\f344";
+  font-family: dashicons;
+  vertical-align: middle; }
+
+/* hide the entry title for status posts */
+.format-status .entry-title {
+  display: none; }
+
+/* add margin for video posts on single post page */
+.single-format-video.reduced-spacing.missing-post-thumbnail .post-inner {
+  padding-top: 5rem; }
+
+/* - SITE PAGES - */
+/* set padding for post inner */
+.singular .post-inner {
+  padding-top: 5rem; }
+
+/* change page header layout on pages that are not the post page */
+body:not(.blog) #site-content header.header-footer-group {
+  /* remove padding from header */
+  padding: 4rem 0 0;
+  /* set header inner to display flex, adjust size, set colors */
+  /* change styles for header intro text */ }
+  body:not(.blog) #site-content header.header-footer-group .section-inner {
+    display: flex;
+    flex-direction: column;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+    padding-top: 1%;
+    padding-bottom: 1%; }
+    body:not(.blog) #site-content header.header-footer-group .section-inner.medium {
+      width: 100vw;
+      max-width: 100%; }
+    body:not(.blog) #site-content header.header-footer-group .section-inner.intro-text {
+      padding: 2.5% 0 0; }
+  body:not(.blog) #site-content header.header-footer-group .intro-text {
+    font-family: var(--font-base-default);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc( 100% - 24px);
+    width: 120rem;
+    /* remove margin from headings in intro text */ }
+    body:not(.blog) #site-content header.header-footer-group .intro-text h1,
+    body:not(.blog) #site-content header.header-footer-group .intro-text h2,
+    body:not(.blog) #site-content header.header-footer-group .intro-text h3,
+    body:not(.blog) #site-content header.header-footer-group .intro-text h4,
+    body:not(.blog) #site-content header.header-footer-group .intro-text h5,
+    body:not(.blog) #site-content header.header-footer-group .intro-text h6 {
+      margin-top: 0; }
+
+/* - POSTS PAGE - */
+/* add right arrow after post title link for link posts */
+.format-link .entry-title a:after {
+  content: "\f344";
+  font-family: dashicons;
+  vertical-align: middle; }
+
+/* hide the entry title for status posts */
+.format-status .entry-title {
+  display: none; }
+
+/* - ARCHIVE PAGES - */
+body.archive #site-content header.header-footer-group {
+  /* set archive page title font size */
+  /* change styles for header intro text */
+  /* set intro text and archive title font sizes for screens > 700px */
+  /* set intro text font sizes for screens > 1000px */
+  /* set intro text and archive title font sizes for screens > 1220px */ }
+  body.archive #site-content header.header-footer-group .section-inner .archive-title {
+    font-size: 3.6rem; }
+  body.archive #site-content header.header-footer-group .intro-text p {
+    font-size: 2rem; }
+  @media screen and (min-width: 700px) {
+    body.archive #site-content header.header-footer-group .section-inner .archive-title {
+      font-size: 6.4rem; }
+    body.archive #site-content header.header-footer-group .intro-text p {
+      font-size: 2.6rem; } }
+  @media screen and (min-width: 1000px) {
+    body.archive #site-content header.header-footer-group .intro-text p {
+      font-size: 2.8rem; } }
+  @media screen and (min-width: 1220px) {
+    body.archive #site-content header.header-footer-group .section-inner .archive-title {
+      font-size: 8.4rem; }
+    body.archive #site-content header.header-footer-group .intro-text p {
+      font-size: 3.2rem; } }
+/* -- JETPACK -- */
+/* SHARING BUTTONS/RELATED POSTS */
+body .entry-content {
+  /* make share this title smaller, reduce margin */
+  /* set max width for related posts area */ }
+  body .entry-content div.sharedaddy h3.sd-title,
+  body .entry-content h3.sd-title,
+  body .entry-content .sharedaddy.sd-sharing-enabled,
+  body .entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+    font-size: 2rem;
+    margin-bottom: .5rem; }
+  body .entry-content #jp-relatedposts {
+    max-width: 58rem;
+    /* change font size for related posts title */ }
+    body .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+      font-size: 80%; }
+
+/* JETPACK SEARCH */
+/* make content in search full-width */
+.jetpack-instant-search__result-expanded__copy-container {
+  width: 100%; }
+
+/* hide featured image in search */
+.jetpack-instant-search__result-expanded__image-container {
+  display: none; }
+
+/* -- BUG FIXES -- */
+/* fix wordpress.com notification iframe width */
+iframe#wpnt-notes-iframe2.wide {
+  width: auto !important; }
+
+/* fix adminbar jetpack issue in twenty twenty */
+.admin-bar {
+  position: unset !important; }
+
+/* fix background attachment for safari on ipados */
+@supports (-webkit-touch-callout: inherit) {
+  .wp-block-cover.has-parallax,
+  .wp-block-cover-image.has-parallax {
+    background-attachment: scroll; } }
+
+/* -- ADDITIONAL CSS -- */

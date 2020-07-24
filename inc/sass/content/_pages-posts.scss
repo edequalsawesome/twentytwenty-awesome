@@ -1,0 +1,12 @@
+/* - POSTS PAGE - */
+/* add right arrow after post title link for link posts */
+.format-link .entry-title a:after {
+	content: "\f344";
+	font-family: dashicons;
+	vertical-align: middle;
+}
+
+/* hide the entry title for status posts */
+.format-status .entry-title {
+	display: none;
+}

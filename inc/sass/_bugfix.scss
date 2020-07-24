@@ -1,0 +1,18 @@
+/* -- BUG FIXES -- */
+/* fix wordpress.com notification iframe width */
+iframe#wpnt-notes-iframe2.wide {
+	width: auto !important;
+}
+
+/* fix adminbar jetpack issue in twenty twenty */
+.admin-bar {
+	position: unset !important;
+}
+
+/* fix background attachment for safari on ipados */
+@supports (-webkit-touch-callout: inherit) {
+	.wp-block-cover.has-parallax, 
+	.wp-block-cover-image.has-parallax {
+		background-attachment: scroll;
+	}
+}
