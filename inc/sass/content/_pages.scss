@@ -1,14 +1,17 @@
 /* - SITE PAGES - */
 /* set padding for post inner */
 .singular .post-inner {
-	padding-top: 5rem;
+	padding-top: 2rem;
 }
 
 /* change page header layout on pages that are not the post page */
 body:not(.blog) {
 	#site-content header.header-footer-group {
 		/* remove padding from header */
-		padding: 4rem 0 0;
+		padding: 2rem 0 2rem;
+		
+		/* add accent color background band */
+		background: linear-gradient(to bottom, transparent 20%, var(--wp--preset--color--accent) 20%,  var(--wp--preset--color--accent) 80%, transparent 80%);
 		
 		/* set header inner to display flex, adjust size, set colors */
 		.section-inner {
@@ -17,16 +20,24 @@ body:not(.blog) {
 			background: var(--wp--preset--color--primary);
 			color: var(--wp--preset--color--background);
 			
-			padding-top: 1%;
-			padding-bottom: 1%;
+			padding: 1rem;
 			
 			&.medium {
-				width: 100vw;
-				max-width: 100%;
+				width: 120rem;
+				max-width: calc( 100% - 24px );
 			}
 			
 			&.intro-text {
 				padding: 2.5% 0 0;
+				
+				a {
+					color: #ffffff;
+				}
+			}
+			
+			.post-meta,
+			.post-meta a {
+				color: var(--wp--preset--color--background);
 			}
 		}
 		
@@ -36,8 +47,8 @@ body:not(.blog) {
 			
 			margin-left: auto;
 			margin-right: auto;
-			max-width: calc( 100% - 24px );
 			width: 120rem;
+			max-width: calc( 100% - 24px );
 			
 			/* remove margin from headings in intro text */
 			h1,
