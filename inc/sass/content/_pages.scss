@@ -11,7 +11,9 @@ body:not(.blog) {
 		padding: 2rem 0 2rem;
 		
 		/* add accent color background band */
-		background: linear-gradient(to bottom, transparent 20%, var(--wp--preset--color--accent) 20%,  var(--wp--preset--color--accent) 80%, transparent 80%);
+		@media screen and (min-width: 1000px) {
+			background: linear-gradient(to bottom, transparent 20%, var(--wp--preset--color--accent) 20%,  var(--wp--preset--color--accent) 80%, transparent 80%);
+		}
 		
 		/* set header inner to display flex, adjust size, set colors */
 		.section-inner {
@@ -23,8 +25,18 @@ body:not(.blog) {
 			padding: 1rem;
 			
 			&.medium {
+				/* add colored borders to single page header */
+				border-top: .5em solid var(--wp--preset--color--accent);
+				border-bottom: .5em solid var(--wp--preset--color--accent);
+				
 				width: 120rem;
-				max-width: calc( 100% - 24px );
+				max-width: 100%;
+				
+				@media screen and (min-width: 1000px) {
+					border-top: 0;
+					border-bottom: 0;
+					max-width: calc( 100% - 24px );
+				}
 			}
 			
 			&.intro-text {
